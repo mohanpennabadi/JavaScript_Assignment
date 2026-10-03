@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1>Employee Task Manager</h1>
+            <p>Manage, track and update employee tasks</p>
+        </div>
+
+        <div class="welcome">
+            Welcome
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Summary Cards -->
+        <section class="summary">
+
+            <div class="summary-card">
+                <span class="card-title">Total Tasks</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+            <div class="summary-card completed-card">
+                <span class="card-title">Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+            <div class="summary-card pending-card">
+                <span class="card-title">Pending</span>
+                <strong id="pendingTasks">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section class="task-form-section">
+
+            <h2>+ Add New Task</h2>
+
+            <form id="taskForm">
+
+                <div class="form-group">
+                    <label for="employeeName">Employee Name</label>
+
+                    <input
+                        type="text"
+                        id="employeeName"
+                        placeholder="Enter employee name"
+                    >
+
+                    <!-- Employee names will be loaded here -->
+                    <small id="employeeLoading"></small>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+
+                    <select id="department">
+                        <option value="">Select Department</option>
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="task">Task</label>
+
+                    <input
+                        type="text"
+                        id="task"
+                        placeholder="Enter task description"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+
+                    <select id="priority">
+                        <option value="">Select Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+
+                    <input
+                        type="date"
+                        id="dueDate"
+                    >
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Add Task
+                </button>
+
+            </form>
+
+            <!-- Validation / error message -->
+            <p id="formMessage"></p>
+
+        </section>
+
+
+        <!-- Search and Filters -->
+        <section class="filter-section">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search employee or task..."
+            >
+
+
+            <select id="departmentFilter">
+                <option value="">All Departments</option>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+
+
+            <select id="statusFilter">
+                <option value="">All Status</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+        </section>
+
+
+        <!-- Task List -->
+        <section class="task-list-section">
+
+            <div class="task-list-header">
+                <h2>☷ Task List</h2>
+                <span id="taskCount"></span>
+            </div>
+
+
+            <!-- Loading state -->
+            <div id="loadingMessage" class="message">
+                Loading employees...
+            </div>
+
+
+            <!-- Error state -->
+            <div id="errorMessage" class="message error">
+            </div>
+
+
+            <!-- Empty state -->
+            <div id="emptyMessage" class="message">
+                No tasks available.
+            </div>
+
+
+            <!-- Task Table -->
+            <div class="table-container">
+
+                <table id="taskTable">
+
+                    <thead>
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Department</th>
+                            <th>Task</th>
+                            <th>Priority</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="taskTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
