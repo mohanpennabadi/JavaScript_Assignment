@@ -22,3 +22,29 @@ body {
         padding: 1.5rem;
     }
 }
+.summary {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.summary-card {
+    flex: 1;
+    padding: 1.5rem;
+    text-align: center;
+    background: white;
+    border-radius: 0.5rem;
+}
+
+.summary-card strong {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 40rem) {
+    .summary {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
