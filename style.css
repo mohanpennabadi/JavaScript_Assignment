@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+.header {
+    width: 100%;
+    padding: 2rem;
+    background: #1f2937;
+    color: white;
+    text-align: center;
+}
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+@media (max-width: 40rem) {
+    .header {
+        padding: 1.5rem;
+    }
+}
