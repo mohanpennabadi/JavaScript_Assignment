@@ -46,3 +46,32 @@ body {
         padding: 1rem;
     }
 }
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background: #ffffff;
+}
+.task-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.task-form input,
+.task-form select,
+.task-form button {
+    padding: 0.75rem;
+    font: inherit;
+}
+.task-form button {
+    background: #1f2937;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 40rem) {
+    .task-form {
+        padding: 1rem;
+    }
+}
