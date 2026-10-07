@@ -11,3 +11,22 @@ function updateTaskSummary() {
     pendingTasks.textContent = pending;
 }
 updateTaskSummary();
+const taskForm = document.getElementById("taskForm");
+
+taskForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const task = {
+        employee: document.getElementById("employeeName").value,
+        department: document.getElementById("department").value,
+        task: document.getElementById("task").value,
+        priority: document.getElementById("priority").value,
+        dueDate: document.getElementById("dueDate").value,
+        status: "Pending"
+    };
+
+    tasks.push(task);
+
+    taskForm.reset();
+    updateTaskSummary();
+});
