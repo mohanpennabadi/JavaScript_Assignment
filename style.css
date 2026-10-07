@@ -50,6 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1.5rem;
     background: #ffffff;
     border-radius: 0.5rem;
 }
@@ -63,16 +64,21 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
-.task-form label {
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form-field label {
     font-weight: bold;
     font-size: 0.9rem;
 }
-.task-form input,
-.task-form select {
+.form-field input,
+.form-field select {
     padding: 0.7rem;
+    font: inherit;
     border: 0.0625rem solid #cbd5e1;
     border-radius: 0.3rem;
-    font: inherit;
 }
 .task-form button {
     padding: 0.7rem;
@@ -84,6 +90,9 @@ body {
     cursor: pointer;
 }
 @media (max-width: 40rem) {
+    .task-form {
+        padding: 1rem;
+    }
     .task-form form {
         grid-template-columns: 1fr;
     }
