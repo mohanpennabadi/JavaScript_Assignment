@@ -26,6 +26,45 @@
         <strong id="pendingTasks">0</strong>
     </div>
 </section>
+<section class="task-form">
+    <h2>Add Task</h2>
+    <form id="taskForm">
+        <div class="form-field">
+            <label for="employeeName">Employee Name</label>
+            <input type="text" id="employeeName" required>
+        </div>
+        <div class="form-field">
+            <label for="department">Department</label>
+            <select id="department" required>
+                <option value="">Select Department</option>
+                <option value="HR">HR</option>
+                <option value="IT">IT</option>
+                <option value="Finance">Finance</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label for="task">Task</label>
+            <input type="text" id="task" required>
+        </div>
+
+        <div class="form-field">
+            <label for="priority">Priority</label>
+            <select id="priority" required>
+                <option value="">Select Priority</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="dueDate">Due Date</label>
+            <input type="date" id="dueDate" required>
+        </div>
+        <button type="submit">Add Task</button>
+    </form>
+</section>
 <script src="script.js"></script>
 </body>
 </html>
