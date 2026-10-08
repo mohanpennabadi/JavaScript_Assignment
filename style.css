@@ -97,3 +97,35 @@ body {
         grid-template-columns: 1fr;
     }
 }
+.search-filter,
+.task-list {
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+}
+.search-filter {
+    display: flex;
+    gap: 1rem;
+}
+.search-filter h2,
+.task-list h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+.search-filter input,
+.search-filter select {
+    flex: 1;
+    padding: 0.7rem;
+    font: inherit;
+    border: 0.0625rem solid #cbd5e1;
+    border-radius: 0.3rem;
+}
+.task-list table { width: 100%; border-collapse: collapse; }
+.task-list th,
+.task-list td { padding: 0.7rem; border-bottom: 0.0625rem solid #e2e8f0; text-align: left; }
+.task-list th { background: #f1f5f9; }
+
+@media (max-width: 40rem) {
+    .search-filter { flex-direction: column; }
+    .task-list { overflow-x: auto; }
+}
