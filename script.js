@@ -2,6 +2,9 @@ const totalTasks = document.getElementById("totalTasks");
 const completedTasks = document.getElementById("completedTasks");
 const pendingTasks = document.getElementById("pendingTasks");
 const tasks = [];
+const dueDate = document.getElementById("dueDate");
+const today = new Date().toISOString().split("T")[0];
+dueDate.min = today;
 function updateTaskSummary() {
     const total = tasks.length;
     const completed = tasks.filter(task => task.status === "Completed").length;
